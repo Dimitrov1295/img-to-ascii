@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link rel="stylesheet" th:href="@{css/image.css}" />
+  </head>
+  <!-- This page is displayed when the home form is submitted and there's no error -->
+
+  <body>
+    <h1>The result is displayed below</h1>
+    <p>Some screen sizes may produce better results than others.</p>
+    <a href="javascript:history.back()">
+      <h4>Go back</h4>
+    </a>
+    <div th:classappend="${ascii.length() > 100} ? normal : error">
+      <!-- Expected String length is >> 100 if there is no error. -->
+      <pre th:utext="${ascii}"></pre>
+    </div>
+  </body>
+</html>

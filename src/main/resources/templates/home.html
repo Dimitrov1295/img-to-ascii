@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image to ASCII converter</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css}">
+</head>
+<!-- The home page -->
+
+<body style="text-align: center;">
+    <div class="container-fluid">
+        <h1 class="text-primary">Image to ASCII converter</h1>
+        <h4 class="text-info">This form takes an image link or an image file and converts it to ascii chars.</h4>
+
+        <div style="display: inline-block;">
+            <form id="form" method="POST" action="convert" enctype="multipart/form-data">
+                <div class="form-group" style="width: max-content;">
+                    <input placeholder="Paste image URL" class="form-control" type="url" name="imageUrl">
+                    <h4 class="text-info">or upload a file</h4>
+                    <input class="form-control-file" type="file" name="imageFile">
+                    <input class="form-control" type="submit" value="Convert image">
+                </div>
+            </form>
+        </div>
+        <!-- Bootstrap JS -->
+        <script th:src="@{https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js}"></script>
+</body>
+
+</html>

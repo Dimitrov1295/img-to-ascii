@@ -1,0 +1,27 @@
+@media screen and (min-width: 1200px) {
+    body {
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-family: monospace;
+    }
+    .normal {
+        font-size: 2px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-family: monospace;
+    }
+    .normal {
+        font-size: 1px;
+    }
+}
+
+.error {
+    font-size: 16px;
+}
