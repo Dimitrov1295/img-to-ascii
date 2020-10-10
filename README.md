@@ -1,3 +1,1 @@
-This is the same app as the one built with Vaadin (https://github.com/Dimitrov1295/Java/tree/master/ImgToAscii), but it uses Spring Boot instead.
-
-It takes an image, converts it to characters and displays it to the screen.
+It takes an image, goes through each pixel and calculates brightness. For each pixel, it inserts a character that has a "brightness" (the fatter the character, the brighter it is for example: " " is less bright than "&") similar to that pixel's brightness. After that is done, the resulting text looks like the source image.
